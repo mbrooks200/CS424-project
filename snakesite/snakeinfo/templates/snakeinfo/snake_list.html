@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% for s in snakes %}
+	<p>
+	<a href ="{% url 'snake_profile' snake_id=s.id %}">{{ s.name }}  - {{s.skill_level}} </a>
+
+
+{% endfor %}
+{% endblock %}
